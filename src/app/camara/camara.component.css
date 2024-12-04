@@ -1,0 +1,7 @@
+.imagen-container {
+    width: 80%;
+    margin: 20px auto;
+}
+.imagen-container img {
+    border-radius: 10px;
+}

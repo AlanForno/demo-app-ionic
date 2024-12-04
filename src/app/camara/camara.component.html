@@ -1,0 +1,14 @@
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-button (click)="tomarFoto()">
+      <ion-icon slot="start" name="camera"></ion-icon>
+      Tomar Foto
+    </ion-button>
+  </ion-row>
+  
+  <ion-row class="ion-justify-content-center">
+    <div class="imagen-container">
+      <img [src]="imageSrc" />
+    </div>
+  </ion-row>
+</ion-grid>
