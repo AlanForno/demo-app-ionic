@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { IonButton, IonIcon, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { camera } from 'ionicons/icons';
@@ -15,14 +15,15 @@ export class CamaraComponent {
   public imageSrc: string | undefined = "";
 
   constructor() {
-    addIcons({ camera});
+    addIcons({ camera });
   }
 
   async tomarFoto() {
     const image = await Camera.getPhoto({
       quality: 90,
-      allowEditing: true,
+      allowEditing: false,
       resultType: CameraResultType.Uri,
+      source: CameraSource.Camera
     });
 
     this.imageSrc = image.webPath;
