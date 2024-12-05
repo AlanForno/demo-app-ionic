@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { library, playCircle, apertureOutline, search } from 'ionicons/icons';
+import { locationOutline, playCircle, apertureOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tabs',
@@ -13,7 +13,7 @@ import { library, playCircle, apertureOutline, search } from 'ionicons/icons';
 export class TabsComponent {
 
   constructor() { 
-    addIcons({library, playCircle, apertureOutline, search});
+    addIcons({locationOutline, playCircle, apertureOutline});
   }
 
 }

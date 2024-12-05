@@ -14,10 +14,10 @@ export const routes: Routes = [
                 path: 'tab2',
                 loadComponent: () => import('../tab2/tab2.page').then(m => m.Tab2Page)
             },
-            // {
-            //     path: 'inicio',
-            //     loadComponent: () => import('../tab1/tab1.page').then(m => m.InicioPage)
-            // },
+            {
+                path: 'tab3',
+                loadComponent: () => import('../tab3/tab3.page').then(m => m.Tab3Page)
+            },
             {
                 path: '',
                 redirectTo: 'tab1',
