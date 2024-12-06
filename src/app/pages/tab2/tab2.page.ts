@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-import { CamaraComponent } from '../camara/camara.component';
+import { CamaraComponent } from '../../components/camara/camara.component';
 
 @Component({
   selector: 'app-tab2',

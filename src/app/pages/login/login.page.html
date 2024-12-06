@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-input type="email" fill="solid" label="Email"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-input type="password" fill="solid" label="Contraseña"></ion-input>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-button>Ingresar</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="usarHuella()">Usar huella</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
