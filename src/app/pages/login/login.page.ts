@@ -29,6 +29,10 @@ export class LoginPage implements OnInit {
     this.validarSoporteBiometrico();
   }
 
+  ingresar() {
+      this.router.navigate(['/tab1/tab1']);
+  }
+
   usarHuella() {
     this.autenticar().then(() => {
       this.router.navigate(['/tab1/tab1']);
