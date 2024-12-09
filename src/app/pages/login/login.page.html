@@ -13,21 +13,30 @@
 
   <ion-grid>
     <ion-row>
-      <ion-input type="email" fill="solid" label="Email"></ion-input>
+      <ion-input type="email" #inputEmail fill="solid" label="Email"></ion-input>
     </ion-row>
     <ion-row>
-      <ion-input type="password" fill="solid" label="Contraseña"></ion-input>
+      <ion-input type="password" #inputPass fill="solid" label="Contraseña"></ion-input>
     </ion-row>
     <ion-row class="ion-justify-content-center">
       <ion-col size="6">
-        <ion-button (click)="ingresar()">Ingresar</ion-button>
+        <ion-button (click)="ingresar(inputEmail, inputPass)">Ingresar</ion-button>
       </ion-col>
       <ion-col size="6">
         <ion-button (click)="usarHuella()">Usar huella</ion-button>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="registrarse(inputEmail, inputPass)">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
 
-    <pre>{{mensajeError}}</pre>
+    <ion-toast
+      [isOpen]="toastAbierto"
+      message="{{mensajeError}}" [duration]="3000"
+      (didDismiss)="setOpen(false)">
+    </ion-toast>
 
   </ion-grid>
 </ion-content>
