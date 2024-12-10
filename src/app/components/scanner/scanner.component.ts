@@ -18,9 +18,9 @@ export class ScannerComponent {
 
   async abrirScanner() {
     BarcodeScanner.installGoogleBarcodeScannerModule().then(e => {
-        BarcodeScanner.installGoogleBarcodeScannerModule();
+        console.log("Modulo BarcodeScanner instalado");
     }).catch(error => {
-      return;
+      console.log(error)
     });
 
     BarcodeScanner.scan({
