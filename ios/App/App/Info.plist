@@ -45,5 +45,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Permiso uso de la cámara.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Permiso agregar fotos a biblioteca.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Permiso acceder a la biblioteca de fotos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Permiso uso de geolocalizacion</string>
 </dict>
 </plist>
