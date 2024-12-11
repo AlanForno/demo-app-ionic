@@ -11,30 +11,31 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid style="margin: 50% auto">
-    <ion-row>
-      <ion-input type="email" #inputEmail fill="solid" label="Email"></ion-input>
-      <ion-input type="password" class="ion-margin-vertical" #inputPass fill="solid" label="Contraseña"></ion-input>
-    </ion-row>
-    <ion-row class="ion-justify-content-center ion-align-items-center">
-      <ion-col size="6">
-        <ion-button expand="block" class="ion-padding" (click)="ingresar(inputEmail, inputPass)">Ingresar</ion-button>
-      </ion-col>
-      <ion-col size="6">
-        <ion-button expand="block" class="ion-padding" color="warning" (click)="usarHuella()">Usar huella</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12" class="ion-text-center">
-        <ion-button color="tertiary" (click)="registrarse(inputEmail, inputPass)">Registrarse</ion-button>
-      </ion-col>
-    </ion-row>
+  <div style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <ion-grid>
+      <ion-row>
+        <ion-input type="email" #inputEmail fill="solid" label="Email"></ion-input>
+        <ion-input type="password" class="ion-margin-vertical" #inputPass fill="solid" label="Contraseña"></ion-input>
+      </ion-row>
+      <ion-row class="ion-justify-content-center ion-align-items-center">
+        <ion-col size="6">
+          <ion-button expand="block" class="ion-padding" (click)="ingresar(inputEmail, inputPass)">Ingresar</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" class="ion-padding" color="warning" (click)="usarHuella()">Usar huella</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button color="tertiary" (click)="registrarse(inputEmail, inputPass)">Registrarse</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-toast
+        [isOpen]="toastAbierto"
+        message="{{mensajeError}}" [duration]="3000"
+        (didDismiss)="setOpen(false)">
+      </ion-toast>
+    </ion-grid>
+  </div>
 
-    <ion-toast
-      [isOpen]="toastAbierto"
-      message="{{mensajeError}}" [duration]="3000"
-      (didDismiss)="setOpen(false)">
-    </ion-toast>
-
-  </ion-grid>
 </ion-content>
