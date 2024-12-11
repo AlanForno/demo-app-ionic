@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" style="padding: 8px;">
+  <ion-buttons slot="start">
+    <ion-back-button default-href="/tab1/tab3"></ion-back-button>
+    <ion-title>Suscripcion</ion-title>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="/tab1/tab3"></ion-back-button>
+        <ion-title size="large">Suscripcion</ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="margin-top: 50%">
+    <ion-item class="ion-margin-vertical ion-padding-horizontal">
+      <ion-select label="Activo / Fondo">
+        <ion-select-option value="apc">AP.C</ion-select-option>
+        <ion-select-option value="rde">RD.E</ion-select-option>
+        <ion-select-option value="aapl">AAPL</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="ion-margin-vertical ion-padding-horizontal">
+      <ion-input
+        inputmode="numeric"
+        type="number"
+        fill="solid"
+        label="Cuotapartes"
+        labelPlacement="floating"
+      ></ion-input>
+    </ion-item>
+
+    <ion-label class="ion-padding ion-float-end">Total: $000.0</ion-label>
+
+    <ion-button color="success" class="ion-padding-horizontal" expand="block">Comprar</ion-button>
+  </div>
+
+</ion-content>
